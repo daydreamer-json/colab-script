@@ -38,58 +38,72 @@ mv nero.zip ./nero/
 cd /content/build_tempdir/nero
 7z x nero.zip
 cd /content/build_tempdir
-cd /content/build_tempdir/lame-3.100/
+rm *.tar.gz
+rm *.tar.xz
+rm *.tar.bz2
+rm *.zip
+rename -v 's/-[0-9].*//' lame-*
+rename -v 's/-[0-9].*//' twolame-*
+rename -v 's/-[0-9].*//' flac-*
+rename -v 's/-[0-9].*//' lib*-*
+rename -v 's/-[0-9].*//' *-tools-*
+rename -v 's/-[0-9].*//' *_aotuv-*
+rename -v 's/-[0-9].*//' opus-*
+rename -v 's/-[0-9].*//' opusfile-*
+rename -v 's/-[0-9].*//' sox-*
+rename -v 's/_[0-9].*//' qaac_*
+cd /content/build_tempdir/lame/
 ./configure
 make
 sudo make install
-cd /content/build_tempdir/twolame-0.4.0/
+cd /content/build_tempdir/twolame/
 ./configure
 make
 sudo make install
-cd /content/build_tempdir/flac-1.4.2/
+cd /content/build_tempdir/flac/
 ./configure
 make
 sudo make install
-cd /content/build_tempdir/libogg-1.3.5/
+cd /content/build_tempdir/libogg/
 ./configure
 make
 sudo make install
-cd /content/build_tempdir/libvorbis-1.3.7/
+cd /content/build_tempdir/libvorbis/
 ./configure
 make
 sudo make install
-cd /content/build_tempdir/vorbis-tools-1.4.2/
+cd /content/build_tempdir/vorbis-tools/
 ./configure
 make
 sudo make install
-cd /content/build_tempdir/vorbis_aotuv-beta6.03-2020/
+cd /content/build_tempdir/vorbis_aotuv/
 chmod -R 774 .
 ./configure
 make
 sudo make install
-cd /content/build_tempdir/opus-1.3.1/
+cd /content/build_tempdir/opus/
 ./configure
 make
 sudo make install
-cd /content/build_tempdir/opusfile-0.12/
+cd /content/build_tempdir/opusfile/
 ./configure
 make
 sudo make install
-cd /content/build_tempdir/libopusenc-0.2.1/
+cd /content/build_tempdir/libopusenc/
 ./configure
 make
 sudo make install
-cd /content/build_tempdir/opus-tools-0.2/
+cd /content/build_tempdir/opus-tools/
 ./configure
 make
 sudo make install
-cd /content/build_tempdir/sox-14.4.2/
+cd /content/build_tempdir/sox/
 ./configure
 make
 sudo make install
 mkdir /qaac/
-cp /content/build_tempdir/qaac_2.76/x64/* /qaac/
-cp /content/build_tempdir/qaac_2.76/x86/* /qaac/
+cp /content/build_tempdir/qaac/x64/* /qaac/
+cp /content/build_tempdir/qaac/x86/* /qaac/
 alias qaac64='wine /qaac/qaac64.exe'
 alias qaac='wine /qaac/qaac.exe'
 alias refalac64='wine /qaac/refalac64.exe'
