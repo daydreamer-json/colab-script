@@ -2,7 +2,8 @@
 mkdir /ncnn_bin
 cd /ncnn_bin
 sudo apt update
-sudo apt install curl unzip libvulkan-dev
+sudo wget -q -nc -O /usr/local/bin/curl https://github.com/moparisthebest/static-curl/releases/latest/download/curl-amd64
+sudo apt install unzip libvulkan-dev
 curl -SsLo waifu2x.zip https://github.com/nihui/waifu2x-ncnn-vulkan/releases/download/20220728/waifu2x-ncnn-vulkan-20220728-ubuntu.zip
 curl -SsLo realesrgan.zip https://github.com/xinntao/Real-ESRGAN-ncnn-vulkan/releases/download/v0.2.0/realesrgan-ncnn-vulkan-v0.2.0-ubuntu.zip
 curl -SsLo realcugan.zip https://github.com/nihui/realcugan-ncnn-vulkan/releases/download/20220728/realcugan-ncnn-vulkan-20220728-ubuntu.zip
