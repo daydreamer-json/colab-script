@@ -63,7 +63,7 @@ rename -v 's/-[0-9].*//' twolame-* > /dev/null 2>&1
 rename -v 's/-[0-9].*//' flac-* > /dev/null 2>&1
 rename -v 's/-[0-9].*//' lib*-* > /dev/null 2>&1
 rename -v 's/-[0-9].*//' *-tools-* > /dev/null 2>&1
-rename -v 's/-[0-9].*//' *_aotuv-* > /dev/null 2>&1
+rename -v 's/-(beta|)[0-9].*//' *_aotuv-* > /dev/null 2>&1
 rename -v 's/-[0-9].*//' opus-* > /dev/null 2>&1
 rename -v 's/-[0-9].*//' opusfile-* > /dev/null 2>&1
 rename -v 's/-[0-9].*//' sox-* > /dev/null 2>&1
