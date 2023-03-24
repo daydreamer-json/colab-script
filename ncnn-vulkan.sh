@@ -1,5 +1,6 @@
 #!/bin/bash
 mkdir /ncnn_bin
+mkdir /ncnn_bin/realesrgan-ncnn-vulkan
 cd /ncnn_bin
 sudo apt update
 sudo wget -q -nc -O /usr/local/bin/curl https://github.com/moparisthebest/static-curl/releases/latest/download/curl-amd64
@@ -13,7 +14,7 @@ aria2c -q -x16 -s16 -o dain.zip https://github.com/nihui/dain-ncnn-vulkan/releas
 aria2c -q -x16 -s16 -o cain.zip https://github.com/nihui/cain-ncnn-vulkan/releases/download/20220728/cain-ncnn-vulkan-20220728-ubuntu.zip
 aria2c -q -x16 -s16 -o rife.zip https://github.com/nihui/rife-ncnn-vulkan/releases/download/20221029/rife-ncnn-vulkan-20221029-ubuntu.zip
 aria2c -q -x16 -s16 -o ifrnet.zip https://github.com/nihui/ifrnet-ncnn-vulkan/releases/download/20220720/ifrnet-ncnn-vulkan-20220720-ubuntu.zip
-unzip waifu2x.zip; unzip realesrgan.zip; unzip realcugan.zip; unzip srmd.zip; unzip realsr.zip; unzip dain.zip; unzip cain.zip; unzip rife.zip; unzip ifrnet.zip
+unzip waifu2x.zip; unzip realesrgan.zip -d /ncnn_bin/realesrgan-ncnn-vulkan; unzip realcugan.zip; unzip srmd.zip; unzip realsr.zip; unzip dain.zip; unzip cain.zip; unzip rife.zip; unzip ifrnet.zip
 rm *.zip
 rename -v 's/-ncnn-vulkan.*/-ncnn-vulkan/' *-ncnn-vulkan*
 cd /content
