@@ -27,3 +27,4 @@ sudo ln -s '/ncnn_bin/dain-ncnn-vulkan/dain-ncnn-vulkan' /usr/local/bin/dain-ncn
 sudo ln -s '/ncnn_bin/cain-ncnn-vulkan/cain-ncnn-vulkan' /usr/local/bin/cain-ncnn-vulkan
 sudo ln -s '/ncnn_bin/rife-ncnn-vulkan/rife-ncnn-vulkan' /usr/local/bin/rife-ncnn-vulkan
 sudo ln -s '/ncnn_bin/ifrnet-ncnn-vulkan/ifrnet-ncnn-vulkan' /usr/local/bin/ifrnet-ncnn-vulkan
+chmod a+rx '/ncnn_bin/realesrgan-ncnn-vulkan/realesrgan-ncnn-vulkan'
